@@ -1,5 +1,5 @@
 class RedactorCapsens::DocumentsController < ApplicationController
-  before_filter :redactor_authenticate_user!
+  before_action :redactor_authenticate_user!
 
   def index
     @documents = RedactorCapsens.document_model.where(
